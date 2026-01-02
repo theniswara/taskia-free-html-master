@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   userForm.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const userData = {
+      username: document.getElementById("username").value,
+    };
+
+    userManager.saveUser(userData);
+
     console.log("berhasil ter submit")
-  })
-})
+  });
+});
