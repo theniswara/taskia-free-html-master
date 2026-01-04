@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   userForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const userNameByInput = document.getElementById("usernname").value;
+    const userNameByInput = document.getElementById("username").value;
 
     const result = userManager.signIn(userNameByInput);
 
