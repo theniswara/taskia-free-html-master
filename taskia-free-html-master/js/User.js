@@ -13,12 +13,21 @@ class User {
     this.users.push(newUser);
 
     // Simpan ke localStorage
-    localStorage.setItem("users",JSON.stringify(this.users));
+    localStorage.setItem("users", JSON.stringify(this.users));
 
     // Arahkan ke halaman sigin
     return {
       success: true,
     };
+  }
+
+  signIn(username) {
+    console.log(username);
+    // proses pengambilan data ke signin.js controller
+    return {
+      success: true,
+      username
+    }
   }
 
   getUsers() {
