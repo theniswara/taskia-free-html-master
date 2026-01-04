@@ -16,8 +16,9 @@ class User {
     localStorage.setItem("users",JSON.stringify(this.users));
 
     // Arahkan ke halaman sigin
-    return (window.location.href = "../signin.html");
-    console.log("User berhasil disimpan:", newUser);
+    return {
+      success: true,
+    };
   }
 
   getUsers() {

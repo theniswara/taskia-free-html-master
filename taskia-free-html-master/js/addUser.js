@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
       username: document.getElementById("username").value,
     };
 
-    userManager.saveUser(userData);
+    const result = userManager.saveUser(userData);
 
-    console.log("berhasil ter submit")
+    if (result.success) {
+      return (window.location.href = "../signin.html")
+    } else {
+      console.log("proses simpan data gagal");
+    }
   });
 });
